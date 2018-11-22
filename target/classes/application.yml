@@ -1,0 +1,23 @@
+###通过下面的配置启用所有的监控端点，默认情况下，这些端点是禁用的；
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+##配置mysql连接信息
+spring:
+  profiles:
+    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+## server端口
+server:
+  port: 8888
+  
+## 自定义配置信息，用于演示 /actuator/info读取
+thinkingcao: 
+   name: zhangsan
+
